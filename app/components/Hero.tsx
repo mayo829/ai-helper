@@ -14,18 +14,21 @@ const Hero = () => {
       <div className="container-width section-padding relative">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-1 animation-delay-200">
-            <span className="text-white">Enhance Any Workflow </span>
-            <span className="text-yellow-300">with isba</span>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2 animation-delay-200">
+            {/* <span className="text-white">Enhance Any Workflow </span>
+            <span className="text-yellow-300">with isba</span> */}
+            <span className="text-white">No input or screenshots.</span>
+            <span className="text-yellow-300"> isba </span>
+            <span className="text-white">simply knows.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-base md:text-sm text-white/60 max-w-3xl mx-auto mb-3 leading-relaxed animation-delay-400">
-            isba is your AI co-pilot, helping you with any task efficiently.
+          <p className="text-base md:text-sm text-white/80 max-w-3xl mx-auto mb-3 leading-relaxed animation-delay-400">
+            An AI co-pilot that helps you get things done without the hassle of manual inputs
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-1 animation-delay-600">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-2 animation-delay-600">
             <Link href="/waitlist">
               <Button size="sm" variant="outline" className="btn-ghost text-[11px] px-4 py-1">
                 Join the Waitlist
@@ -59,8 +62,8 @@ const Hero = () => {
                 <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground">isba AI</p>
-                <p className="text-xs text-muted-foreground">Watching your screen</p>
+                <p className="text-sm font-medium text-foreground">isba</p>
+                <p className="text-xs text-muted-foreground">Connected to your screen</p>
               </div>
               <div className="ml-auto">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-sm shadow-emerald-500/50"></div>
