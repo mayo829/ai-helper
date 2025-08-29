@@ -136,9 +136,29 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    background: var(--gradient-circular);
+    background: none;
     background-attachment: fixed;
     min-height: 100vh;
+  }
+  .hero-section {
+    position: relative; /* Needed for ::before positioning */
+    min-height: 100vh;   /* Or whatever height your hero is */
+    overflow: hidden;    /* Hide overflow if needed */
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-circular);
+    background-attachment: fixed;
+    opacity: 0;
+    animation: fadeInBG 2s ease forwards;
+    z-index: -1; /* Behind hero content */
+  }
+  @keyframes fadeInBG {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   html {

@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden pt-24 min-h-screen flex flex-col">
+    <section className="hero-section relative overflow-hidden pt-24 min-h-screen flex flex-col">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-circular-hero animate-fade-in opacity-80"></div>
+      {/* <div className="absolute inset-0 bg-gradient-circular-hero animate-fade-in opacity-80"></div> */}
       
       {/* Text Section (constrained) */}
       <div className="container-width section-padding relative">
