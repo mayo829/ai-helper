@@ -31,12 +31,14 @@ const Header = () => {
       <div className="container-width">
         <div className="flex items-center justify-between px-6 py-4 relative">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-primary">
-              <Zap className="w-5 h-5 text-primary-foreground" />
+          <Link href="/" className="flex items-center space-x-1">
+            <div className="flex items-center">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-primary">
+                <img src="/favicon.ico" alt="ISBA Logo" className="w-5 h-5" />
+              </div>
+              <span className="text-xl font-bold text-foreground">isba.ai</span>
             </div>
-            <span className="text-xl font-bold text-foreground">isba.ai</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
