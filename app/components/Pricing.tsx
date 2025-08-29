@@ -66,7 +66,7 @@ const Pricing = () => {
               <div className="space-y-4">
                 <Link href="/waitlist">
                   <Button size="lg" className="w-full btn-hero py-4 text-lg">
-                    Join Waitlist for $1
+                    Join Waitlist for $1.99
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>

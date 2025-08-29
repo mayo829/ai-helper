@@ -145,7 +145,6 @@
     min-height: 100vh;   /* Or whatever height your hero is */
     overflow: hidden;    /* Hide overflow if needed */
   }
-  
   .hero-section::before {
     content: '';
     position: absolute;
@@ -159,6 +158,11 @@
   @keyframes fadeInBG {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+  @media (max-width: 768px) {
+    .hero-section::before {
+      background-attachment: scroll;
+    }
   }
 
   html {
