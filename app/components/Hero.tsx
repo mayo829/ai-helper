@@ -17,14 +17,14 @@ const Hero = () => {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2 animation-delay-200">
             {/* <span className="text-white">Enhance Any Workflow </span>
             <span className="text-yellow-300">with isba</span> */}
-            <span className="text-white">No input or screenshots.</span>
+            <span className="text-white">No typing. No screenshots.</span>
             <span className="text-yellow-300"> isba </span>
-            <span className="text-white">simply knows.</span>
+            <span className="text-white">just knows.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-base md:text-sm text-white/80 max-w-3xl mx-auto mb-3 leading-relaxed animation-delay-400">
-            An AI co-pilot that helps you get things done without the hassle of manual inputs
+          <p className="text-base md:text-sm text-white/70 max-w-3xl mx-auto mb-3 leading-relaxed animation-delay-400">
+            ChatGPT without the hassle of typing long prompts or sharing screenshots
           </p>
 
           {/* CTA Buttons */}
