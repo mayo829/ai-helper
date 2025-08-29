@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional AI/SaaS Design System - isba.ai */
+
+@layer base {
+  :root {
+    /* Core Background System - Cosmic Dark Theme */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    
+    /* Surface Colors - Deep Space */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+    --surface: 240 8% 10%;
+    --surface-foreground: 0 0% 90%;
+    
+    /* Brand Colors - Solar Eclipse Theme */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
+    --primary-light: 0 0% 100%;
+    --primary-dark: 0 0% 90%;
+    
+    /* Gradient Definitions - Solar Eclipse from Bottom */
+    --gradient-primary: linear-gradient(135deg, hsl(45 100% 60%), hsl(30 100% 50%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%), hsl(240 10% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 60%) 0%, hsl(30 100% 50%) 25%, hsl(280 80% 40%) 50%, hsl(260 100% 25%) 100%);
+    --gradient-circular: radial-gradient(
+      ellipse at center bottom,
+       hsl(45 100% 60%) 0%,
+       hsl(30 100% 50%) 15%,
+       hsl(280 80% 40%) 35%,
+       hsl(260 100% 25%) 60%,
+       hsl(0 0% 3%) 100%
+    );
+    --gradient-circular-hero: radial-gradient(
+      ellipse at center bottom, 
+      hsl(45 100% 70%) 0%, 
+      hsl(30 100% 60%) 10%, 
+      hsl(280 90% 50%) 25%, 
+      hsl(260 100% 30%) 45%, 
+      hsl(240 80% 15%) 70%, 
+      hsl(0 0% 0%) 100%
+    );
+    --gradient-circular-hero-top: radial-gradient(
+      ellipse at center top, 
+      hsl(45 100% 70%) 0%, 
+      hsl(30 100% 60%) 10%, 
+      hsl(280 90% 50%) 25%, 
+      hsl(260 100% 30%) 45%, 
+      hsl(240 80% 15%) 70%, 
+      hsl(0 0% 0%) 100%
+    );
+    
+    /* Accent Colors - Golden Eclipse */
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 3%;
+    --accent-light: 45 100% 85%;
+    --accent-subtle: 45 80% 20%;
+    
+    /* Semantic Colors - Cosmic */
+    --secondary: 240 15% 12%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 0 0% 70%;
+    
+    /* Interactive States - Mystical */
+    --border: 260 30% 20%;
+    --input: 240 15% 12%;
+    --ring: 45 100% 60%;
+    --hover: 280 80% 50%;
+    
+    /* Shadows - Cosmic Glow */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.5);
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.6);
+    --shadow-lg: 0 10px 25px -3px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 50px hsl(45 100% 60% / 0.4);
+    
+    /* Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+  }
+
+  .dark {
+    /* Enhanced Dark Mode - Cosmic Eclipse */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+    --surface: 240 8% 10%;
+    --surface-foreground: 0 0% 90%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
+    --primary-light: 0 0% 100%;
+    --primary-dark: 0 0% 90%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(45 100% 60%), hsl(30 100% 50%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%), hsl(240 10% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 60%) 0%, hsl(30 100% 50%) 25%, hsl(280 80% 40%) 50%, hsl(260 100% 25%) 100%);
+    --gradient-circular: radial-gradient(ellipse at center bottom, hsl(45 100% 50%) 0%, hsl(30 100% 45%) 15%, hsl(280 70% 35%) 35%, hsl(260 90% 20%) 60%, hsl(0 0% 0%) 100%);
+    --gradient-circular-hero: radial-gradient(ellipse at center bottom, hsl(45 100% 60%) 0%, hsl(30 100% 55%) 10%, hsl(280 80% 45%) 25%, hsl(260 100% 25%) 45%, hsl(240 70% 10%) 70%, hsl(0 0% 0%) 100%);
+    
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 3%;
+    --accent-light: 45 50% 25%;
+    --accent-subtle: 45 80% 15%;
+    
+    --secondary: 240 15% 12%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 0 0% 70%;
+    
+    --border: 260 30% 20%;
+    --input: 240 15% 12%;
+    --ring: 45 100% 60%;
+    --hover: 280 80% 50%;
+    
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.7);
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.8);
+    --shadow-lg: 0 10px 25px -3px hsl(0 0% 0% / 0.9);
+    --shadow-glow: 0 0 50px hsl(45 100% 60% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background: var(--gradient-circular);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: hsl(var(--background));
+  }
+}
+
+@layer components {
+  /* Component Variants - Solar Eclipse Theme */
+  .btn-hero {
+    @apply bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 text-black shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  .btn-ghost {
+    @apply border border-border bg-card hover:bg-gradient-to-r hover:from-yellow-900/20 hover:to-yellow-800/30 text-foreground hover:shadow-md transition-all duration-300 hover:border-accent/30;
+  }
+  
+  .section-padding {
+    @apply px-6 lg:px-8 py-16 lg:py-24;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply text-white;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent/20;
+  }
+  
+  .glass-effect {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 hover:border-accent/20 transition-all duration-300;
+  }
+  
+  .feature-card-colorful:nth-child(1) .feature-gradient {
+    @apply bg-gradient-to-br from-yellow-500/10 to-orange-600/10;
+  }
+  
+  .feature-card-colorful:nth-child(2) .feature-gradient {
+    @apply bg-gradient-to-br from-purple-500/10 to-violet-600/10;
+  }
+  
+  .feature-card-colorful:nth-child(3) .feature-gradient {
+    @apply bg-gradient-to-br from-indigo-500/10 to-purple-600/10;
+  }
+  
+  .feature-card-colorful:nth-child(4) .feature-gradient {
+    @apply bg-gradient-to-br from-amber-500/10 to-yellow-600/10;
+  }
+  
+  .feature-card-colorful:nth-child(5) .feature-gradient {
+    @apply bg-gradient-to-br from-orange-500/10 to-red-600/10;
+  }
+  
+  .feature-card-colorful:nth-child(6) .feature-gradient {
+    @apply bg-gradient-to-br from-violet-500/10 to-purple-600/10;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
