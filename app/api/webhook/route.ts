@@ -1,5 +1,6 @@
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import sendConfirmationEmail from "@/app/components/SendEmail";
 
 // Initialize Stripe & Supabase
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: "2025-08-27" });
@@ -24,6 +25,7 @@ export const POST = async (req: Request) => {
     const session = event.data.object as Stripe.Checkout.Session;
     const email = session.customer_email!;
     const name = session.metadata?.name!;
+    const confirmation = session.metadata?.confirmation!;
 
     // Check if user already exists (idempotency)
     const { data: existingUser } = await supabase
@@ -42,7 +44,7 @@ export const POST = async (req: Request) => {
         console.error("Supabase insert error:", error);
       } else {
         // Only send email if insert succeeded
-        await sendConfirmationEmail(email, name);
+        await sendConfirmationEmail(email, name, confirmation);
       }
     } else {
       console.log(`User ${email} already exists, skipping insert/email.`);
@@ -51,10 +53,3 @@ export const POST = async (req: Request) => {
 
   return new Response(JSON.stringify({ received: true }), { status: 200 });
 };
-
-// Example email sending function
-async function sendConfirmationEmail(email: string, name: string) {
-  // Integrate with your email provider (SendGrid, Postmark, etc.)
-  console.log(`Sending confirmation email to ${name} <${email}>`);
-  // await emailClient.send({ to: email, subject: ..., body: ... });
-}
