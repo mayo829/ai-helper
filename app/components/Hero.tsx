@@ -24,7 +24,9 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-base md:text-sm text-white/70 max-w-3xl mx-auto mb-3 leading-relaxed animation-delay-400">
-            ChatGPT without the hassle of typing long prompts or sharing screenshots
+            <span>ChatGPT </span>
+            <span className="text-yellow-300">without the hassle </span>
+            <span>of typing long prompts or sharing screenshots</span>
           </p>
 
           {/* CTA Buttons */}

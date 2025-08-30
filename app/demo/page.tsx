@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
+import PageHeader from '@/components/PageHeader'
 import { ArrowLeft, Play, Monitor, Code, Mail, FileText } from 'lucide-react';
 import Link from 'next/link';
 
@@ -27,20 +30,7 @@ const Demo = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Header */}
-      <header className="glass-effect border-b border-border">
-        <div className="container-width px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Home</span>
-            </Link>
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 rounded bg-gradient-primary"></div>
-              <span className="font-bold text-foreground">isba.ai</span>
-            </div>
-          </div>
-        </div>
-      </header>
+      <PageHeader title="isba.ai" showBackLink={true} backHref="/" />
 
       {/* Main Content */}
       <main className="section-padding">
@@ -83,26 +73,29 @@ const Demo = () => {
 
           {/* Demo Scenarios */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {demoScenarios.map((scenario, index) => (
-              <div
-                key={scenario.title}
-                className="group relative overflow-hidden rounded-xl glass-effect card-hover animate-fade-in"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${scenario.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                <div className="relative p-6">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${scenario.color} mb-4`}>
-                    <scenario.icon className="w-6 h-6 text-white" />
+            {demoScenarios.map((scenario, index) => {
+              const Icon = scenario.icon;
+              return (
+                <div
+                  key={scenario.title}
+                  className="group relative overflow-hidden rounded-xl glass-effect card-hover animate-fade-in"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${scenario.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                  <div className="relative p-6">
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${scenario.color} mb-4`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">
+                      {scenario.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {scenario.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">
-                    {scenario.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {scenario.description}
-                  </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Call to Action */}
